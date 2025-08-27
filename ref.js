@@ -2,7 +2,8 @@
   try {
     var url = new URL(window.location.href);
     var token = url.searchParams.get("ref") || url.searchParams.get("code");
-    if (!token) return; // nada a fazer
+    console.log('123')
+    if (!token) return;
 
     // evita chamada repetida se usuário recarregar a mesma página
     if (sessionStorage.getItem("qc_ref_sent") === token) return;
